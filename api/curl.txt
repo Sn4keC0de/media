@@ -1,0 +1,5 @@
+curl --location 'localhost/server/apis/secret' \
+--header 'Content-Type: application/json' \
+--data '{
+    "word" : "Kevin"
+}'

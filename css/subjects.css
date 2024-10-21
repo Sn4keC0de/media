@@ -1,0 +1,108 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Source+Code+Pro:ital,wght@0,200..900;1,200..900&display=swap');
+
+#app {
+    color: rgb(9, 255, 0);
+    font-size: 13px;
+    text-shadow: 0 0 20px #00d90b;
+}
+
+.source-code-pro {
+    font-family: "Source Code Pro", monospace;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+.wrapper {
+    float: left;
+    width: 50%;
+    padding: 10px;
+    height: 300px;
+    border: 2px solid #595959;
+    border-top: 20px solid #595959;
+    background-color: black;
+
+    overflow-y: scroll;
+    scrollbar-width: thin;
+}
+
+.masterSubjectContainer {
+    float: left;
+    width: 50%;
+    padding: 10px;
+    height: 300px; 
+    /* border-left: 3px solid black; */
+}
+
+.subjectContainer {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.subjectTextContainer {
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    margin-right: .5rem;
+}
+
+.subjectTextIcon {
+    width: 15px;
+    margin-right: .5rem;
+}
+
+.cuboTest {
+    position: absolute;
+    z-index: 1;
+    width: 100px;
+    align-self: center;
+}
+
+
+.tuboDeMierda {
+    /* background-image: url(../img/TuboPrueba.png);
+    background-repeat: no-repeat;
+    background-size: contain; */
+    /* width: 50%; */
+    height: 50vh;
+    position: absolute;
+    z-index: 2;
+    top: 0;
+}
+
+
+/* Subject up & down animate */
+
+.upDown-animation {
+    animation-name: infiniteupdown;
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in-out;
+    transition: all .3s;
+}
+
+@keyframes infiniteupdown {
+    0% {
+        transform: translateY(20px);
+    }
+
+    50% {
+        transform: translateY(-10px);
+    }
+
+    100% {
+        transform: translateY(20px);
+    }
+}

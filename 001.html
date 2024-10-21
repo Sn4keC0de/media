@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" type="x-icon" href="./img/butterfly.png">
+    <script src="https://unpkg.com/typewriter-effect@latest/dist/core.js"></script>
+    <!-- <link rel="stylesheet" href="./css/jquery.mCustomScrollbar.css"/> -->
+    <link rel="stylesheet" href="./css/styles.css" />
+    <link rel="stylesheet" href="./css/subjects.css" />
+
+    <title>M.E.D.I.A</title>
+</head>
+<body>
+    <header>
+        <div id="header">
+            <a href="index.html" class="LogoText">M.E.D.I.A</a>
+            <!-- <h1 href="index.html" class="LogoText">M.E.D.I.A</h1> -->
+            <!-- <img id="LogoImg" src="./img/MEDIA.png" alt=""> -->
+
+            <nav class="navbar">
+                <div class="nav_items" id="_items">
+                    <a href="index.html#Experiments">Subjects</a>
+                    <a data-value="???" class="secretoLink" href="secreto.html">???</a>
+                    <a href="files.html">Files</a>
+                </div>
+
+                <div class="nav_toggle" id="_toggle">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <div class="row">
+            <div class="wrapper" id="wrapper">
+                <div class="source-code-pro" id="app"></div>
+            </div>
+
+            <div class="masterSubjectContainer">
+                <div class="subjectTextContainer">
+                    <img class="subjectTextIcon" src="./img/butterfly.png" alt="">
+                    <h2 class="subjectText">Subject 001</h2>
+                </div>
+                
+                <div class="subjectContainer">
+                    <img class="cuboTest upDown-animation" src="./img/CuboTest.png" alt="">
+                    <img class="tuboDeMierda" src="./img/TuboPrueba.png" alt="">
+                    <!-- <div class="tuboDeMierda"></div> -->
+                </div>
+
+                <div class="heartbeatContainer">
+                    <div class="monitor">0.0 0.0</div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <p>© M.E.D.I.A. is not responsible for how Experiments are treated. The M.E.D.I.A. project has full permission from the government to treat them as test subjects without limit, allowing completely direct damage to semi-human parts of the Experiments. The Experiments are only objects with the sole function of getting more views, any necessary change to prioritize increasing the audience is a priority.</p>
+    </footer>
+    <script src="js/subjects.js"></script>
+    <script>
+        _toggle.onclick = () =>{
+            _items.classList.toggle("open")
+            _toggle.classList.toggle("close")
+        }
+    </script>
+</body>
+</html>
