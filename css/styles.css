@@ -1,3 +1,7 @@
+html {
+    scroll-behavior: smooth;
+}
+
 * {
     margin: 0;
     padding: 0;
@@ -95,26 +99,19 @@ header {
     text-decoration: none;
 }
 
-@media (min-width: 768px) {
-    
-    .nav_items a::before{
-        content: "";
-        position: absolute;
-        left: 0;
-        bottom: 0;
-        width: 0;
-        height: 3px;
-        background: rgb(255, 5, 5);
-        transition: all 0.3s;
-    }
-    
-    .nav_items .secretoLink::before{
-        background: rgb(25, 213, 0);
-    }
-    
-    .nav_items a:hover::before{
-        width: 100% !important;
-    }
+.nav_items a::before {
+    content: '';
+    position: absolute;
+    bottom: 1px;
+    left: 0;
+    width: 0%;
+    height: 3px;
+    background-color: #ff0004;
+    transition: all .3s;
+}
+
+.nav_items a:hover::before {
+    width: 100%;
 }
 
 .nav_toggle{
@@ -451,7 +448,170 @@ footer p {
 
 /* Media Queries */
 
-@media (max-width: 480px) {
+/* Escritorio */
+
+@media only screen and (min-width:1024px) {
+    
+}
+
+/* Laptops */
+
+@media only screen and (min-width:992px) and (max-width:1023px) {
+    .nav_items a::before{
+        content: "";
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        width: 0;
+        height: 3px;
+        background: rgb(255, 5, 5);
+        transition: all 0.3s;
+    }
+    
+    .nav_items .secretoLink::before{
+        background: rgb(25, 213, 0);
+    }
+    
+    .nav_items a:hover::before{
+        width: 100% !important;
+    }
+}
+
+
+/* Tablets */
+
+@media only screen and (min-width: 768px) and (max-width: 991px) {
+
+    #loader {
+        display: none;
+    }
+
+    header {
+        text-align: start;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        position: sticky;
+        top: 0;
+        z-index: 999;
+
+        display: table;
+        clear: both;
+    }
+
+    #header {
+        border-bottom: none;
+        padding: 20px;
+    }
+
+    .navbar {
+        height: 3rem;
+        justify-content: end;
+    }
+
+    .nav_items{
+        position: absolute;
+        z-index: -1;
+        top: 88px;
+        left: 0;
+        background: rgba(8, 8, 8, 0.44);
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        height: auto;
+        transform: translateY(-99%);
+        transition: 0.3s ease all;
+        backdrop-filter: blur(4px);
+        border-bottom: 3px solid #ff0000;
+    }
+
+    .nav_items a{
+        font-size: xx-large;
+        text-align: center;
+        padding-top: 20px;
+        height: 80px;
+    }
+
+    .nav_items .secretoLink {
+        display: none;
+    }
+
+    .nav_toggle{
+        display: flex;
+        flex-direction: column;             
+        /* margin: 15px; */
+        padding: 10px;
+    }
+
+    .nav_toggle span{
+        width: 30px;
+        height: 4px;
+        background: white;
+        margin-bottom: 5px;
+        border-radius: 2px;             
+        transform-origin: 5px 0px;
+        transition: all 0.2s linear;
+    }
+
+    .close span{
+        transform: rotate(45deg) translate(0px, 0px);
+    }
+
+    .close span:nth-child(2){
+        display: none;
+    }
+
+    .close span:nth-child(3){
+        transform: rotate(-45deg) translate(-5px, 1px);
+    }
+
+    .open{ transform: translateX(0) !important}
+
+    .LogoText {
+        float: left;
+        width: 50%;
+        margin-bottom: 0;
+    }
+
+    #secretoLink {
+        display: none;
+    }
+
+    .exOptions {
+        width: 100%;
+    }
+
+    .content, .glitch {
+        width: 260px;
+        height: 260px;
+    }
+
+    #Experiments {
+        padding-top: 0 !important;
+        padding-bottom: 0 !important;
+        padding: 80px;
+    }
+
+    .exOptions {
+        grid-template-columns: 45% 45%;
+        gap: 10%;
+        row-gap: 40px;
+    }
+
+    #Experiments {
+        padding-top: 8rem;
+    }
+
+    footer p {
+        font-size: 0.68rem;
+    }
+    
+}
+
+/* Celulares */
+
+@media only screen and (max-width: 768px) {
     #loader {
         display: none;
     }
