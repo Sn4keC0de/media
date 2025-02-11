@@ -1,0 +1,62 @@
+* {
+  padding-top: 50px !important;
+  padding: 200px;
+}
+
+.boat-container {
+  width: 900px;
+  height: 600px;
+  padding: 40px;
+  background-color: blueviolet;
+  animation: animate 5s ease 0s 1 normal forwards;
+  animation-iteration-count: infinite;
+}
+
+#console {
+  width: 90%;
+  height: 300px;
+  border: 1px solid #ccc;
+  overflow-y: scroll !important;
+  padding: 10px;
+  background-color: black !important;
+  color: green;
+  font-family: monospace;
+  font-size: 15px;
+}
+
+.cursor {
+  animation: blink-cursor 0.75s infinite;
+}
+
+@keyframes animate {
+	0% {
+		transform: translate(0);
+	}
+
+	20% {
+		transform: translate(-10px, 10px);
+	}
+
+	40% {
+		transform: translate(-10px, -10px);
+	}
+
+	60% {
+		transform: translate(10px, 10px);
+	}
+
+	80% {
+		transform: translate(10px, -10px);
+	}
+
+	100% {
+		transform: translate(0);
+	}
+}
+
+@keyframes blink-cursor {
+  0% { color: green; }
+  50% { color: green; }
+  51% { color: transparent; }
+  100% { color: transparent; }
+}

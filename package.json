@@ -1,5 +1,9 @@
 {
   "dependencies": {
+    "three": "^0.172.0",
     "three-css3drenderer": "^1.0.1"
+  },
+  "devDependencies": {
+    "vite": "^6.0.7"
   }
 }
