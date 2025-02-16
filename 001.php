@@ -1,3 +1,7 @@
+<?php
+
+?>
+
 <!DOCTYPE html>
 <html lang="es">
 <head>
@@ -13,27 +17,7 @@
     <title>M.E.D.I.A</title>
 </head>
 <body>
-    <header>
-        <div id="header">
-            <a href="index.html" class="LogoText">M.E.D.I.A</a>
-            <!-- <h1 href="index.html" class="LogoText">M.E.D.I.A</h1> -->
-            <!-- <img id="LogoImg" src="./img/MEDIA.png" alt=""> -->
-
-            <nav class="navbar">
-                <div class="nav_items" id="_items">
-                    <a href="index.html#Experiments">Subjects</a>
-                    <a data-value="???" class="secretoLink" href="secreto.html">???</a>
-                    <a href="files.html">Files</a>
-                </div>
-
-                <div class="nav_toggle" id="_toggle">
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                </div>
-            </nav>
-        </div>
-    </header>
+    <?php include ('php_modules/menu.php');  ?>
 
     <main>
         <div class="row">

@@ -1,3 +1,7 @@
+<?php
+
+?>
+
 <!DOCTYPE html>
 <html lang="es">
 <head>
@@ -9,45 +13,25 @@
 </head>
 <body>
     <div id="loader"></div>
-    <header>
-        <div id="header">
-            <h1 class="LogoText">M.E.D.I.A</h1>
-            <!-- <img id="LogoImg" src="./img/MEDIA.png" alt=""> -->
 
-            <nav class="navbar">
-                <div class="nav_items" id="_items">
-                    <a href="#Experiments">Subjects</a>
-                    <a data-value="???" class="secretoLink" href="secreto.html">???</a>
-                    <a href="files.html">Files</a>
-                </div>
-
-                <div class="nav_toggle" id="_toggle">
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                </div>
-            </nav>
-        </div>
-    </header>
+    <?php include ('php_modules/menu.php');  ?>
 
     <main>
         <div id="content"></div>
 
-
         <section id="Experiments">
-            <!-- <h1 class="exTitle" data-value="Experiments">Experiments</h1> -->
             <div class="exOptions">
                 <div class="content">
-                    <a href="001.html"><div class="glitch uno"></div></a>
+                    <a href="001.php"><div class="glitch uno"></div></a>
                 </div>
                 <div class="content">
-                    <a href="002.html"><div class="glitch dos"></div></a>
+                    <a href="002.php"><div class="glitch dos"></div></a>
                 </div>
                 <div class="content">
-                    <a href="003.html"><div class="glitch tres"></div></a>
+                    <a href="003.php"><div class="glitch tres"></div></a>
                 </div>
                 <div class="content">
-                    <a href="004.html"><div class="glitch cuatro"></div></a>
+                    <a href="004.php"><div class="glitch cuatro"></div></a>
                 </div>
             </div>
         </section>
