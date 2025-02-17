@@ -13,7 +13,7 @@ body {
     min-height: 100vh;
     display: flex;
     flex-direction: column;
-    background-image: url("../img/background.png");
+    /* background-image: url("../img/background.webp"); */
     background-repeat: no-repeat;
     background-size: cover;
     background-attachment: fixed;
@@ -39,7 +39,7 @@ a {
     max-width: 100%;
     overflow-clip-margin: content-box;
     overflow: clip;
-    background: #000 url("../img/MEDIA_logo.gif") no-repeat center center;
+    background: #000 url("../img/MEDIA_logo.webp") no-repeat center center;
 }
 
 main {
