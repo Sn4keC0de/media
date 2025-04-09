@@ -1,0 +1,309 @@
+:root {
+    --dateCon-width: 78px;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'comfortaa';
+}
+
+@font-face {
+    font-family: 'comfortaa';
+    src: url("../fonts/Comfortaa-Regular.ttf");
+}
+
+body {
+    height: 100vh;
+    overflow: hidden;
+    background: #3d3d3d;
+}
+
+main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    width: 100%;
+}
+
+.computerCon {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 1500px;
+    width: 1500px;
+}
+
+.computerCon img {
+    position: absolute;
+    opacity: .2;
+    top: 0;
+    left: 0;
+    z-index: 2;
+    width: 100%;
+    height: 100%;
+}
+
+.mainCon {
+    position: absolute;
+    z-index: 1;
+    overflow: hidden;
+
+    /* margin-top: 100px; */
+    width: 2000px;
+    height: 1200px;
+
+    background-image: url("../img/desktopW.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.computerCon:focus {
+    animation: 10s forwards zoom-in;
+}
+
+@keyframes zoom-in {
+    from {
+        resize: 10px;
+      }
+    
+      to {
+        resize: 1000px;
+      }
+}
+
+
+/* Escritorio donde las aplicaciones */
+
+
+.deskCon {
+    padding: 10px;
+    width: 100%;
+    height: 95%;
+
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+    grid-template-rows: auto auto auto auto auto auto;
+
+    gap: 20px;
+
+    place-items: center;
+}
+
+.app {
+    width: 150px;
+    padding: 8px;
+    height: 165px;
+    background-color: #ffffff00;
+    border-radius: 2px;
+    border: #ffffff00;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.app:hover {
+    background-color: #ffffff34;
+}
+
+.app:active { 
+    background-color: #ffffff5b;
+}
+
+.app i {
+    font-size: 100px;
+    color: #d3a62b;
+}
+
+.app span {
+    font-size: 1.3rem;
+    margin-top: 10px;
+    color: #fff;
+    text-align: center;
+    overflow-wrap: break-word;
+}
+
+.console {
+    grid-column: 1;
+    grid-row: 1;
+}
+
+.console i {
+    border-radius: 2px;
+    padding: 7px;
+    background-color: #202020;
+    color: rgb(175, 7, 7);
+}
+
+.app i {
+    color: #aa0c0c;
+}
+
+.archiveA {
+    grid-column: 9;
+    grid-row: 2;
+}
+
+.archiveB {
+    grid-column: 9;
+    grid-row: 3;
+}
+
+.archiveC {
+    grid-column: 9;
+    grid-row: 4;
+}
+
+.archiveD {
+    grid-column: 9;
+    grid-row: 5;
+}
+
+
+
+/* Barra de tareas */
+
+.barCon {
+    position: relative;
+    bottom: 0;
+    background-color: rgba(75, 75, 75, 0.24);
+    width: 100%;
+    height: 5%;
+    display: flex;
+    flex-direction: row;
+    /* justify-content: center; */
+    align-items: center;
+    backdrop-filter: blur(2px);
+    z-index: 1999;
+}
+
+.soIcon {
+    margin-left: 20px;
+    position: absolute;
+    left: 0;
+    width: 50px;
+    background-color: #00000000;
+}
+
+.soIcon:active {
+    border: 2px solid #000;
+}
+
+.soIcon i {
+    color: #fff;
+    font-size: 40px;
+}
+
+.serIco {
+    position: absolute;
+    right: 0;
+    margin-right: calc(var(--dateCon-width) + 20px);
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
+.serIco i {
+    color: #fff;
+    font-size: 18px;
+}
+
+.dateCon {
+    width: var(--dateCon-width);
+    position: absolute;
+    right: 0;
+    margin-right: 10px;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 8px;
+}
+
+.hour, .date {
+    font-weight: 100;
+    font-size: .9rem;
+}
+
+/* Ventana de aplicacion */
+
+.appCon {
+    background-image: linear-gradient(blue, purple);
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+
+}
+
+.audiosCar {
+    border: 1.5px solid #000;
+    background-color: grey;
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    left: 280px;
+    top: 200px;
+    width: 1000px;
+    height: 800px;
+    resize: both;
+    overflow: auto;
+    opacity: 0;
+    z-index: -1;
+}
+
+.audiosCar.open {
+    opacity: 1;
+    z-index: 1;
+}
+
+.carHeaderCon {
+    padding-left: 15px;
+    font-size: 1.4rem;
+    position: relative;
+    background-color: rgb(169, 35, 8);
+    display: flex;
+    align-items: center;
+    box-sizing: border-box;
+    border: 1px solid black;
+    width: 100%;
+    height: 100%;
+    max-height: 50px;
+}
+
+.carConCon {
+    padding: 20px;
+    display: flex;
+    flex-direction: row;
+    box-sizing: border-box;
+    border: 1px solid black;
+    width: 100%;
+    height: 100%;
+}
+
+.cons {
+    padding: 0 !important;
+    border: 0!important;
+}
+
+.cloWin {
+    position: absolute;
+    margin-right: 10px;
+    right: 0;
+    background-color: rgba(0, 0, 0, 0.3);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 42px;
+    height: 42px;
+    cursor: pointer;
+    font-size: 1.4rem;
+}

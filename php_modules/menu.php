@@ -18,8 +18,9 @@
             <nav class="navbar">
                 <div class="nav_items" id="_items">
                     <a href="index.php">Subjects</a>
-                    <a data-value="???" class="secretoLink" href="secreto.php">???</a>
-                    <a href="files.php">Files</a>
+                    <!-- <a data-value="???" class="secretoLink" href="secreto.php">???</a> -->
+                    <!-- <a href="files.php">Files</a> -->
+                    <a href="desktop.php">MEDIA-SO</a>
                 </div>
 
                 <div class="nav_toggle" id="_toggle">

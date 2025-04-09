@@ -1,5 +1,5 @@
 <?php
-
+    ob_start("ob_gzhandler");
 ?>
 
 <!DOCTYPE html>
@@ -11,7 +11,7 @@
     <link rel="stylesheet" href="./css/styles.css" />
     <title>M.E.D.I.A</title>
 </head>
-<body>
+<body loading="lazy">
     <div id="loader"></div>
 
     <?php include ('php_modules/menu.php');  ?>
@@ -47,6 +47,16 @@
             _items.classList.toggle("open")
             _toggle.classList.toggle("close")
         }
+        // $(document).ready(function() {
+        //     $('#slider-content').delay(200).animate({opacity:1.0}, 'linear', function(){ 
+        //     $('#background-loading').animate({opacity:0, 'margin-left':'-70px'}, 'linear');
+        //     $('.slider-image').animate({opacity:1.0, 'margin-left':'0em'}, 'linear', function(){});
+        // });
+        //   });
     </script>
 </body>
 </html>
+
+<?php
+    ob_end_flush();
+?>
