@@ -21,8 +21,18 @@
 
     <main>
         <div class="row">
-            <div class="wrapper" id="wrapper">
-                <div class="source-code-pro" id="app"></div>
+
+            <!-- console -->
+
+            <div class="win">
+                <div class="fndCrt"></div>
+                <div class="carHeaderCon">
+                    MEDIA Console
+                    <button class="cloWin">X</button>
+                </div>
+                <div class="wrapper" id="wrapper">
+                    <div class="source-code-pro" id="app"></div>
+                </div>
             </div>
 
             <!-- <div id="console"></div> -->
@@ -39,9 +49,9 @@
                     <!-- <div class="tuboDeMierda"></div> -->
                 </div>
 
-                <div class="heartbeatContainer">
+                <!-- <div class="heartbeatContainer">
                     <div class="monitor">0.0 0.0</div>
-                </div>
+                </div> -->
             </div>
         </div>
     </main>

@@ -3,7 +3,7 @@ var app = document.getElementById('app')
 var Typewriter = new Typewriter(app, {
     loop: false,
     // delay: 30,
-    delay: 5,
+    delay: 1,
 });
 
 Typewriter
